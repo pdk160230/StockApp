@@ -1,17 +1,20 @@
 import axios from "axios";
 import React from "react";
+import {useParams, useNavigate, Link} from 'react-router-dom'; 
+
 
 // API KEY EMBPDVNX7PHRU487
 
 
 export function GetData(){
-const url = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=AAPL&apikey=EMBPDVNX7PHRU487' 
 
 const [post, setPost] = React.useState(null); 
 
+let {search} = useParams(); 
+
 
  React.useEffect(() => {
-   axios.get(url).then((response) => {
+   axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${search}&apikey=EMBPDVNX7PHRU487` ).then((response) => {
      setPost(response.data); 
      console.log(response.data);
    });

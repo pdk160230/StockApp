@@ -1,15 +1,21 @@
 import {useState, useEffect} from 'react'; 
-
+import {useParams, useNavigate, Link} from 'react-router-dom'; 
 
 export function DataSearch(){
 
     const [data, setData] = useState(null); 
+    const navigate = useNavigate(); 
+
+    
 
     
 
     return (
 
         <form onSubmit = {() => {
+
+            navigate("/data/" + data)
+
 
         }}>
             <div>
@@ -18,7 +24,7 @@ export function DataSearch(){
                     (e) => {setData(e.target.value) }}>
                 
                 </input>
-                <button>Search</button>
+                <button type = "submit">Search</button>
             </div>
         </form>
     )
