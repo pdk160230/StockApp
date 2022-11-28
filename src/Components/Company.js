@@ -16,8 +16,6 @@ export function Company(props){
     <div>
         <div className = "flex flex-wrap justify-center items-center mr-4">
 
-    
-
     <ul className=" flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
     
       <li> 
@@ -39,9 +37,7 @@ export function Company(props){
     
       <li> 
         <a className = "py-2 px-4 w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600"> Average: {props._50DayMovingAverage} </a> </li>
-   
-    
-    
+
 
     </ul>
    
